@@ -1,0 +1,2 @@
+# Near-CyberTicket
+This application powered by NEAR Protocol is a disruption to traditional ticketing and music industry. A CyberTicket once created can be owned and traded by people with ease. This will help us to reduce the issues that exist currently with fake ticketing scams and bots. This system also allows artist to easily create campaigns and can raise funds that provides an quicker return than usual funding for world tours.
