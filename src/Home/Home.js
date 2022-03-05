@@ -5,6 +5,9 @@ import Calendar from "../assets/calendar.png";
 import People from "../assets/people.png";
 import Book from "../assets/book.png";
 import Fandom from "../assets/fandom.png";
+import SXSW from "../assets/sxsw.jpeg";
+import TateMcRae from "../assets/tate-mcrae.jpeg";
+import EmoNightTour from "../assets/emo-night-tour.jpeg";
 
 const aboutData = [
   {
@@ -31,6 +34,48 @@ const aboutData = [
     description:
       "CyberTickets have traceability, allowing users to gain knowledge and gather post sales customer data. Protect consumers from counterfeits and scalpers.",
     image: People,
+  },
+];
+
+export const upcomingLaunches = {
+  "sxsw-mendes-yatra": {
+    event: "The Stage at SXSW: Shawn Mendes and Sebastian Yatra",
+    date: "03/19/2022",
+    image: SXSW,
+    eventPath: "sxsw-mendes-yatra",
+    location: "The Long Center for the Performing Arts",
+  },
+  "tate-mcrae": {
+    event: "Tate McRae",
+    date: "03/21/2022",
+    image: TateMcRae,
+    eventPath: "tate-mcrae",
+    location: "The Long Center for the Performing Arts",
+  },
+  "emo-night-tour": {
+    event: "Emo Night Tour",
+    date: "04/01/2022",
+    image: EmoNightTour,
+    eventPath: "emo-night-tour",
+    location: "The Long Center for the Performing Arts",
+  },
+};
+
+export const notableDrops = [
+  {
+    event: "Nick Cave + Warren Ellis - North American Tour 2022",
+    date: "03/05/2022",
+    image: "",
+  },
+  {
+    event: "The English Beat",
+    date: "03/10/2022",
+    image: "",
+  },
+  {
+    event: "The SteelDrivers",
+    date: "03/12/2022",
+    image: "",
   },
 ];
 
@@ -102,14 +147,6 @@ function HomeTopBar({}) {
           </button>
         </div>
       </div>
-      <div
-        style={{
-          height: 400,
-          width: 400,
-          backgroundColor: "gray",
-          borderRadius: 20,
-        }}
-      ></div>
     </div>
   );
 }
@@ -119,39 +156,34 @@ function UpcomingLaunches() {
     <div style={{ textAlign: "center" }}>
       <h1 className="sectionHeader">Upcoming Launches</h1>
       <div className="flexRow largeSidePadding">
-        <button
-          onClick={() => {
-            window.location.href = "/launchpad";
-          }}
-          style={{
-            height: 350,
-            width: "30%",
-            backgroundColor: "gray",
-            borderRadius: 10,
-          }}
-        />
-        <button
-          onClick={() => {
-            window.location.href = "/launchpad";
-          }}
-          style={{
-            height: 350,
-            width: "30%",
-            backgroundColor: "gray",
-            borderRadius: 10,
-          }}
-        />
-        <button
-          onClick={() => {
-            window.location.href = "/launchpad";
-          }}
-          style={{
-            height: 350,
-            width: "30%",
-            backgroundColor: "gray",
-            borderRadius: 10,
-          }}
-        />
+        {Object.values(upcomingLaunches).map((item) => {
+          return (
+            <button
+              class="btn btn-light btn-sm"
+              onClick={() => {
+                window.location.href = "/launchpad/" + item.eventPath;
+              }}
+              style={{
+                height: 370,
+                width: "30%",
+                backgroundColor: "white",
+                borderRadius: 10,
+                display: "flex",
+                alignItems: "flex-start",
+                flexDirection: "column",
+                padding: 0,
+                overflow: "hidden",
+                textAlign: "center",
+              }}
+            >
+              <img src={item.image} style={{ width: "100%", height: 250 }} />
+              <br />
+              <h1 className="eventCardTitle">{item.event}</h1>
+              <br />
+              <h1 className="eventCardDate">{item.date}</h1>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
@@ -162,39 +194,34 @@ function NotableDrops() {
     <div style={{ textAlign: "center" }}>
       <h1 className="sectionHeader">Notable Drops</h1>
       <div className="flexRow largeSidePadding">
-        <button
-          onClick={() => {
-            window.location.href = "/marketplace";
-          }}
-          style={{
-            height: 550,
-            width: "30%",
-            backgroundColor: "gray",
-            borderRadius: 10,
-          }}
-        />
-        <button
-          onClick={() => {
-            window.location.href = "/marketplace";
-          }}
-          style={{
-            height: 550,
-            width: "30%",
-            backgroundColor: "gray",
-            borderRadius: 10,
-          }}
-        />
-        <button
-          onClick={() => {
-            window.location.href = "/marketplace";
-          }}
-          style={{
-            height: 550,
-            width: "30%",
-            backgroundColor: "gray",
-            borderRadius: 10,
-          }}
-        />
+        {Object.values(upcomingLaunches).map((item) => {
+          return (
+            <button
+              class="btn btn-light btn-sm"
+              onClick={() => {
+                window.location.href = "/marketplace/" + item.eventPath;
+              }}
+              style={{
+                height: 370,
+                width: "30%",
+                backgroundColor: "white",
+                borderRadius: 10,
+                display: "flex",
+                alignItems: "flex-start",
+                flexDirection: "column",
+                padding: 0,
+                overflow: "hidden",
+                textAlign: "center",
+              }}
+            >
+              <img src={item.image} style={{ width: "100%", height: 250 }} />
+              <br />
+              <h1 className="eventCardTitle">{item.event}</h1>
+              <br />
+              <h1 className="eventCardDate">{item.date}</h1>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

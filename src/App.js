@@ -22,6 +22,7 @@ export default function App() {
         <Nav className="me-auto">
           <Nav.Link href="/launchpad">Launchpad</Nav.Link>
           <Nav.Link href="/marketplace">Marketplace</Nav.Link>
+          <Nav.Link href="/">Fundraising</Nav.Link>
         </Nav>
         <Nav>
           <Nav.Link href="/artists">Artists</Nav.Link>
@@ -36,7 +37,15 @@ export default function App() {
       </Navbar>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/launchpad" component={Launchpad} />
+        <Route
+          path="/launchpad/:event"
+          render={(props) => <Launchpad {...props} />}
+        />
+        <Route
+          path="/marketplace/:event"
+          render={(props) => <Marketplace {...props} />}
+        />
+        <Route path="/launchpad" component={Launchpad} />
         <Route exact path="/marketplace" component={Marketplace} />
         <Route exact path="/artists" component={Artists} />
       </Switch>

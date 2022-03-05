@@ -243,6 +243,10 @@ aside footer *:last-child {
   width: 40vw;
 }
 
+.fullWidth {
+  width: 100vw;
+}
+
 .homeSubtitle {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -263,4 +267,26 @@ aside footer *:last-child {
   color: black;
   margin-top: 50px;
   margin-bottom: 30px;
+}
+
+.eventCardTitle {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  align-self: center;
+  font-size: 15px;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.eventCardDate {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400;
+  align-self: center;
+  font-size: 13px;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
 }
