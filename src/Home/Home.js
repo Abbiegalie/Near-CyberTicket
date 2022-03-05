@@ -8,6 +8,7 @@ import Fandom from "../assets/fandom.png";
 import SXSW from "../assets/sxsw.jpeg";
 import TateMcRae from "../assets/tate-mcrae.jpeg";
 import EmoNightTour from "../assets/emo-night-tour.jpeg";
+import Logo from "../assets/logo.png";
 
 const aboutData = [
   {
@@ -100,6 +101,7 @@ function HomeTopBar({}) {
   return (
     <div className="coverImageStyle">
       <div>
+        <img src={Logo} style={{ height: 150, width: 150, marginLeft: -30 }} />
         <h1 className="homeTitle">Introducing non-fungible ticketing</h1>
         <h1 className="homeSubtitle">
           Our secure NFT ticketing marketplace enables proof of authenticity,

@@ -30,7 +30,7 @@ export default function Marketplace(props) {
           paddingRight: 20,
         }}
       >
-        {[...Array(4).keys()].map((item) => {
+        {[...Array(8).keys()].map((item) => {
           return <MarketplaceCard event={event} />;
         })}
       </div>

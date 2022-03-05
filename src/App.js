@@ -9,7 +9,6 @@ import getConfig from "./config";
 import Home from "./Home/Home";
 import Launchpad from "./Launchpad/Launchpad";
 import Marketplace from "./Marketplace/Marketplace";
-import Artists from "./Artists/Artists";
 const { networkId } = getConfig(process.env.NODE_ENV || "development");
 
 export default function App() {
@@ -25,7 +24,7 @@ export default function App() {
           <Nav.Link href="/">Fundraising</Nav.Link>
         </Nav>
         <Nav>
-          <Nav.Link href="/artists">Artists</Nav.Link>
+          <Nav.Link href="/">Artists</Nav.Link>
           <button
             type="button"
             class="btn btn-light btn-sm"
@@ -47,7 +46,6 @@ export default function App() {
         />
         <Route path="/launchpad" component={Launchpad} />
         <Route exact path="/marketplace" component={Marketplace} />
-        <Route exact path="/artists" component={Artists} />
       </Switch>
     </div>
   );
