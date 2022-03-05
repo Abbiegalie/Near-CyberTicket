@@ -203,6 +203,7 @@ aside footer *:last-child {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .sidePadding {
@@ -210,12 +211,17 @@ aside footer *:last-child {
   padding-right: 4vw;
 }
 
+.largeSidePadding {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
 .coverImageStyle {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.2),
       rgba(255, 255, 255, 0.4)
     ),
-    url("./concert.jpeg");
+    url("./assets/concert.jpeg");
   height: 75vh;
   width: 100%;
   background-size: cover;
@@ -246,4 +252,15 @@ aside footer *:last-child {
   color: black;
   width: 40vw;
   margin-top: 30px;
+}
+
+.sectionHeader {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 200;
+  align-self: center;
+  font-size: 20px;
+  color: black;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }

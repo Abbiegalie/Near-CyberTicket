@@ -1,32 +1,36 @@
 import "regenerator-runtime/runtime";
 import React from "react";
 import "../global.css";
+import Calendar from "../assets/calendar.png";
+import People from "../assets/people.png";
+import Book from "../assets/book.png";
+import Fandom from "../assets/fandom.png";
 
-const instructionsData = [
+const aboutData = [
   {
     title: "Enhance Your Fandom",
     description:
       "Choose your prices, set your ticket amount. You have complete control over how you want to sell your tickets and we help you sell them directly to your fans.",
-    image: "",
+    image: Fandom,
   },
 
   {
     title: "Discover Events",
     description:
-      "Find events you love, from the artist you love. Tickets can easily be traded among wallets.",
-    image: "",
+      "Find events you love, from the artist you love. Tickets can easily be bought and sold through our secondary marketplace.",
+    image: Calendar,
   },
   {
     title: "Create your collection",
     description:
       "Start your collection and gain access to unique, in concert airdrop memorabilia.",
-    image: "",
+    image: Book,
   },
   {
     title: "Know Your Audience",
     description:
-      "CyberTickets have traceability, allowing users to gain knowledge and gather post sales customer data. Discover counterfeits and protect consumers from fraudulent products and scalpers.",
-    image: "",
+      "CyberTickets have traceability, allowing users to gain knowledge and gather post sales customer data. Protect consumers from counterfeits and scalpers.",
+    image: People,
   },
 ];
 
@@ -34,31 +38,15 @@ export default function Home() {
   return (
     <div
       style={{
-        height: "1000px",
         overflowY: "scroll",
         backgroundColor: "white",
+        paddingBottom: 100,
       }}
     >
       <HomeTopBar />
-      <div className="flexRow sidePadding">
-        {instructionsData.map((data) => (
-          <div
-            style={{
-              width: "25%",
-              alignItems: "center",
-              textAlign: "center",
-              padding: 10,
-              paddingTop: 30,
-            }}
-          >
-            <text style={{ fontWeight: "bold", fontSize: 16 }}>
-              {data.title}
-            </text>
-            <br />
-            <text>{data.description}</text>
-          </div>
-        ))}
-      </div>
+      <UpcomingLaunches />
+      <NotableDrops />
+      <AboutData />
     </div>
   );
 }
@@ -83,6 +71,9 @@ function HomeTopBar({}) {
           <button
             type="button"
             class="btn btn-primary btn-sm"
+            onClick={() => {
+              window.location.href = "/marketplace";
+            }}
             style={{
               height: 36,
               fontSize: 12,
@@ -96,6 +87,9 @@ function HomeTopBar({}) {
           <button
             type="button"
             class="btn btn-light btn-sm"
+            onClick={() => {
+              window.location.href = "/artists";
+            }}
             style={{
               height: 36,
               fontSize: 12,
@@ -116,6 +110,124 @@ function HomeTopBar({}) {
           borderRadius: 20,
         }}
       ></div>
+    </div>
+  );
+}
+
+function UpcomingLaunches() {
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h1 className="sectionHeader">Upcoming Launches</h1>
+      <div className="flexRow largeSidePadding">
+        <button
+          onClick={() => {
+            window.location.href = "/launchpad";
+          }}
+          style={{
+            height: 350,
+            width: "30%",
+            backgroundColor: "gray",
+            borderRadius: 10,
+          }}
+        />
+        <button
+          onClick={() => {
+            window.location.href = "/launchpad";
+          }}
+          style={{
+            height: 350,
+            width: "30%",
+            backgroundColor: "gray",
+            borderRadius: 10,
+          }}
+        />
+        <button
+          onClick={() => {
+            window.location.href = "/launchpad";
+          }}
+          style={{
+            height: 350,
+            width: "30%",
+            backgroundColor: "gray",
+            borderRadius: 10,
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
+function NotableDrops() {
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h1 className="sectionHeader">Notable Drops</h1>
+      <div className="flexRow largeSidePadding">
+        <button
+          onClick={() => {
+            window.location.href = "/marketplace";
+          }}
+          style={{
+            height: 550,
+            width: "30%",
+            backgroundColor: "gray",
+            borderRadius: 10,
+          }}
+        />
+        <button
+          onClick={() => {
+            window.location.href = "/marketplace";
+          }}
+          style={{
+            height: 550,
+            width: "30%",
+            backgroundColor: "gray",
+            borderRadius: 10,
+          }}
+        />
+        <button
+          onClick={() => {
+            window.location.href = "/marketplace";
+          }}
+          style={{
+            height: 550,
+            width: "30%",
+            backgroundColor: "gray",
+            borderRadius: 10,
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
+function AboutData() {
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h1 className="sectionHeader">Why CyberTicket?</h1>
+      <div className="flexRow sidePadding">
+        {aboutData.map((data) => (
+          <div
+            style={{
+              width: "25%",
+              alignItems: "center",
+              textAlign: "center",
+              padding: 10,
+              paddingTop: 30,
+            }}
+          >
+            <img
+              src={data.image}
+              style={{ height: 40, width: 40, marginBottom: 10 }}
+            />
+            <br />
+            <text style={{ fontWeight: "bold", fontSize: 16 }}>
+              {data.title}
+            </text>
+            <br />
+            <text>{data.description}</text>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
