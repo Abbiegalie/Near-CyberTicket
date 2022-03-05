@@ -25,19 +25,18 @@ html {
   padding-right: 20px;
 }
 
+.instructionContainer {
+  width: 33%;
+}
+
 .navbar {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-h1 {
-  background-image: url(assets/logo-black.svg);
-  background-position: center 1em;
-  background-repeat: no-repeat;
-  background-size: auto 1.5em;
-  margin-top: 0;
-  padding: 3.5em 0 0.5em;
+.centerText {
   text-align: center;
+  margin: auto;
 }
 
 a,
@@ -195,10 +194,56 @@ aside footer *:last-child {
     --shadow: #2a2a2a;
     --light-gray: #444;
   }
-  h1 {
-    background-image: url(assets/logo-white.svg);
-  }
   input:focus {
     box-shadow: 0 0 10em rgba(255, 255, 255, 0.02) inset;
   }
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.sidePadding {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.coverImageStyle {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("./concert.jpeg");
+  height: 75vh;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.homeTitle {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  align-self: center;
+  font-size: 45px;
+  color: black;
+  width: 40vw;
+}
+
+.homeSubtitle {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 200;
+  align-self: center;
+  font-size: 20px;
+  color: black;
+  width: 40vw;
+  margin-top: 30px;
 }
