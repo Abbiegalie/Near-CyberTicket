@@ -30,7 +30,7 @@ export default function Marketplace(props) {
           paddingRight: 20,
         }}
       >
-        {[...Array(8).keys()].map((item) => {
+        {[...Array(4).keys()].map((item) => {
           return <MarketplaceCard event={event} />;
         })}
       </div>
@@ -45,7 +45,7 @@ const MarketplaceCard = ({ event }) => {
         style={{
           height: 420,
           width: 330,
-          marginBottom: 10,
+          marginBottom: 30,
           marginLeft: 10,
           marginRight: 10,
         }}

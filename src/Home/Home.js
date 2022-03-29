@@ -82,16 +82,10 @@ export const notableDrops = [
 
 export default function Home() {
   return (
-    <div
-      style={{
-        overflowY: "scroll",
-        backgroundColor: "white",
-        paddingBottom: 100,
-      }}
-    >
+    <div className="coverImageStyle">
       <HomeTopBar />
-      <UpcomingLaunches />
-      <NotableDrops />
+      {/* <UpcomingLaunches />
+      <NotableDrops /> */}
       <AboutData />
     </div>
   );
@@ -99,15 +93,8 @@ export default function Home() {
 
 function HomeTopBar({}) {
   return (
-    <div className="coverImageStyle">
+    <div>
       <div>
-        <img src={Logo} style={{ height: 150, width: 150, marginLeft: -30 }} />
-        <h1 className="homeTitle">Introducing non-fungible ticketing</h1>
-        <h1 className="homeSubtitle">
-          Our secure NFT ticketing marketplace enables proof of authenticity,
-          ownership, possession, and digital product experiences with just a few
-          clicks.
-        </h1>
         <div
           style={{
             display: "flex",
@@ -115,38 +102,8 @@ function HomeTopBar({}) {
             alignItems: "center",
           }}
         >
-          <button
-            type="button"
-            class="btn btn-primary btn-sm"
-            onClick={() => {
-              window.location.href = "/marketplace";
-            }}
-            style={{
-              height: 36,
-              fontSize: 12,
-              borderRadius: 6,
-              paddingLeft: 25,
-              paddingRight: 25,
-            }}
-          >
-            Explore
-          </button>
-          <button
-            type="button"
-            class="btn btn-light btn-sm"
-            onClick={() => {
-              window.location.href = "/artists";
-            }}
-            style={{
-              height: 36,
-              fontSize: 12,
-              borderRadius: 6,
-              paddingLeft: 25,
-              paddingRight: 25,
-            }}
-          >
-            Create
-          </button>
+          {/* <img src={Logo} style={{ height: 85, width: 85, marginLeft: -30 }} /> */}
+          <h1 className="homeTitle">paperclipe</h1>
         </div>
       </div>
     </div>
@@ -232,21 +189,27 @@ function NotableDrops() {
 function AboutData() {
   return (
     <div style={{ textAlign: "center" }}>
-      <h1 className="sectionHeader">Why CyberTicket?</h1>
+      <h1 className="sectionHeader">Why paperclipe?</h1>
       <div className="flexRow sidePadding">
         {aboutData.map((data) => (
           <div
             style={{
               width: "25%",
+              display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               textAlign: "center",
-              padding: 10,
-              paddingTop: 30,
+              backgroundColor: "rgba(255,255,255,0.15)",
+              margin: 10,
+              height: "50vh",
+              borderRadius: 15,
+              padding: 15,
+              paddingTop: "8vh",
             }}
           >
             <img
               src={data.image}
-              style={{ height: 40, width: 40, marginBottom: 10 }}
+              style={{ height: 55, width: 55, marginBottom: 10 }}
             />
             <br />
             <text style={{ fontWeight: "bold", fontSize: 16 }}>
