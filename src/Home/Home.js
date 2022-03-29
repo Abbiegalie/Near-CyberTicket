@@ -4,7 +4,7 @@ import "../global.css";
 import Calendar from "../assets/calendar.png";
 import People from "../assets/people.png";
 import Book from "../assets/book.png";
-import Fandom from "../assets/fandom.png";
+import Fandom from "../assets/Fandom.png";
 import SXSW from "../assets/sxsw.jpeg";
 import TateMcRae from "../assets/tate-mcrae.jpeg";
 import EmoNightTour from "../assets/emo-night-tour.jpeg";
