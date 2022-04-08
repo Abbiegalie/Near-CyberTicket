@@ -100,10 +100,44 @@ function HomeTopBar({}) {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
           {/* <img src={Logo} style={{ height: 85, width: 85, marginLeft: -30 }} /> */}
           <h1 className="homeTitle">paperclipe</h1>
+          <button
+            class="btn btn-light btn-sm"
+            onClick={() => {
+              window.location.href = "/launchpad/" + item.eventPath;
+            }}
+            style={{
+              height: 30,
+              width: 110,
+              borderRadius: 7,
+              padding: 5,
+            }}
+          >
+            <text style={{ fontSize: 12, fontWeight: "bold" }}>Contact Us</text>
+          </button>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            paddingBottom: 20,
+          }}
+        >
+          <div style={{ paddingLeft: 50 }}>
+            <h1 className="homeLargeTitle">
+              Find and connect with your favorite artists & events in Web 3.0
+            </h1>
+            <h1 className="homeDescription">
+              We build products to link fans and artists while using
+              decentralized technology to protect fans and increase
+              profitability.
+            </h1>
+          </div>
         </div>
       </div>
     </div>
@@ -212,11 +246,11 @@ function AboutData() {
               style={{ height: 55, width: 55, marginBottom: 10 }}
             />
             <br />
-            <text style={{ fontWeight: "bold", fontSize: 16 }}>
+            <text style={{ fontWeight: "bold", fontSize: 16, color: "white" }}>
               {data.title}
             </text>
             <br />
-            <text>{data.description}</text>
+            <text style={{ color: "white" }}>{data.description}</text>
           </div>
         ))}
       </div>
